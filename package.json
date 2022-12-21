@@ -1,6 +1,7 @@
 {
   "name": "bee",
   "version": "0.1.0",
+  "homepage": "pinkfreebee/",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^2.0.12",
