@@ -121,6 +121,9 @@ function App() {
       if (e.key === "Backspace") return setGuess((prev) => prev.slice(0, -1));
       if (e.key === "Enter") return handleEnter();
       if (e.keyCode >= 65 && e.keyCode <= 90) {
+        if (guess.length > 15) {
+          return setMessage("At most 15 letters!");
+        }
         setGuess((prev) => prev + e.key);
       }
     };
@@ -193,7 +196,9 @@ function App() {
         >
           +{showingPoints}
         </div>
-        <span>{guess}</span>
+        {guess.map((g) => (
+          <span>{g}</span>
+        ))}
         <Caret />
       </div>
       <div
