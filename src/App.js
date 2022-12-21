@@ -196,10 +196,11 @@ function App() {
         >
           +{showingPoints}
         </div>
-        {guess.map((g) => (
-          <span>{g}</span>
-        ))}
-        <Caret />
+        {if (guess.length > 0) {
+          guess.map((g) => (<span>{g}</span>))}
+                            }
+                    
+      <Caret />
       </div>
       <div
         style={{
