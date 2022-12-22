@@ -17,6 +17,7 @@ function getHexagonPoints(x, y) {
 
 let startX = r;
 let startY = r * Math.sin(a);
+let guessSpan = "";
 
 function shuffleArray(array) {
   const copy = JSON.parse(JSON.stringify(array));
