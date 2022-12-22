@@ -157,6 +157,11 @@ function App() {
         </div>
       </div>
     );
+
+  guessSpan = "";
+  if (guess.length > 0) {
+    guessSpan = "to";
+ } 
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center">
       <Toast message={message} />
@@ -196,10 +201,7 @@ function App() {
         >
           +{showingPoints}
         </div>
-        {if (guess.length > 0) {
-          guess.map((g) => (<span>{g}</span>))}
-                            }
-                    
+        {guessSpan}    
       <Caret />
       </div>
       <div
