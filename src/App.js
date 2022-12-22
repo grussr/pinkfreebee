@@ -158,10 +158,6 @@ function App() {
       </div>
     );
 
-  guessSpan = "";
-  if (guess.length > 0) {
-    guessSpan = "to";
- } 
   return (
     <div className="fixed inset-0 flex flex-col items-center justify-center">
       <Toast message={message} />
@@ -201,7 +197,12 @@ function App() {
         >
           +{showingPoints}
         </div>
-        {guessSpan}    
+        {[...guess].map((g) => (
+              <span className={classnames("font-black uppercase",
+                 g == game.center ? "text-pink-400" : "text-slate-400")}>
+                {g}
+              </span>
+            ))}    
       <Caret />
       </div>
       <div
