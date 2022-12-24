@@ -121,8 +121,8 @@ function App() {
       if (e.key === "Backspace") return setGuess((prev) => prev.slice(0, -1));
       if (e.key === "Enter") return handleEnter();
       if (e.keyCode >= 65 && e.keyCode <= 90) {
-        if (guess.length > 15) {
-          return setMessage("At most 15 letters!");
+        if (guess.length > 19) {
+          return handleEnter();
         }
         setGuess((prev) => prev + e.key);
       }
@@ -218,7 +218,7 @@ function App() {
           offsetY={0}
           center
           letter={game.center}
-          onClick={() => setGuess((prev) => prev + game.center)}
+          onClick={() => guess.length > 19 ? handleEnter() : setGuess((prev) => prev + game.center)}
         />
         {game.letters.split("").map((letter, i) => (
           <Polygon
@@ -226,7 +226,7 @@ function App() {
             letter={letter}
             offsetX={positions[i][0]}
             offsetY={positions[i][1]}
-            onClick={() => setGuess((prev) => prev + letter)}
+            onClick={() => guess.length > 19 ? handleEnter() : setGuess((prev) => prev + letter)}
           />
         ))}
       </div>
