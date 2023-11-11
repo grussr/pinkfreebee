@@ -50,7 +50,7 @@ const getWordScore = (word, gameLetters) => {
 function App() {
   const [game, setGame] = useState();
   useEffect(() => {
-    fetch("https://freebee.fun/cgi-bin/today")
+    fetch("https://rg-freebee-api.azurewebsites.net/api/generate_puzzle")
       .then((res) => res.json())
       .then(setGame);
   }, []);
