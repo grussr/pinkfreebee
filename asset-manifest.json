@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pinkfreebee/static/css/main.1b13d8b1.css",
+    "main.js": "/pinkfreebee/static/js/main.b85c7597.js",
+    "static/js/787.14942093.chunk.js": "/pinkfreebee/static/js/787.14942093.chunk.js",
+    "index.html": "/pinkfreebee/index.html",
+    "main.1b13d8b1.css.map": "/pinkfreebee/static/css/main.1b13d8b1.css.map",
+    "main.b85c7597.js.map": "/pinkfreebee/static/js/main.b85c7597.js.map",
+    "787.14942093.chunk.js.map": "/pinkfreebee/static/js/787.14942093.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b13d8b1.css",
+    "static/js/main.b85c7597.js"
+  ]
+}
