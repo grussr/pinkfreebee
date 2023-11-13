@@ -6,3 +6,14 @@ body {
   touch-action: pan-x pan-y;
   touch-action: none;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #282c34;
+    color: #fafafa;
+  }
+
+  .text-slate-700 {
+    color: #fafafa;
+  }
+}
